@@ -13,9 +13,6 @@
     bottom:20px;
     left: 0;
     text-align: center;
-    @include mq($until: desktop){
-        display: none;
-    }
 }
 .down-arrow {
     @include bobble (bouncy, 2s, infinite);

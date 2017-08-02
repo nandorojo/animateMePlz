@@ -33,14 +33,19 @@ page {
     text-align: center;
     @include justify-content(center);
     position: relative;
-    height: 100vh;
     color: $background-color;
+    padding: 150px 0;
+    @include mq($from: tablet) {
+        height: 100vh;
+        padding: 0;
+    }
     * {
         z-index: 1;
     }
 }
+
 .bodyText {
-	color: $body-color;
+    color: $body-color;
     max-width: 600px;
     margin: auto;
 }

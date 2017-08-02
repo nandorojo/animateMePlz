@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     var $header = $('.mainHeader'),
         $headerHeight = $header.height(),
         $meter = $('section').first().height(),
@@ -17,7 +18,7 @@ $(document).ready(function () {
 
     function mobileHeader() {
         $mobileHeader.toggleClass('active');
-        $body.toggleClass('overflowHidden');
+   //     $body.toggleClass('overflowHidden'); TODO i don't like how this makes the scroll bar change so fuck it for now 
     };
 
     if (window.location.hash) {
@@ -39,14 +40,14 @@ $(document).ready(function () {
     $mobileHeaderTrigger.on('click', function () { // show / hide mobile menu
         mobileHeader()
     });
-    
-    $mobileHeader.find('a').on('click', function(){
+
+    $mobileHeader.find('a').on('click', function () {
         $mobileHeader.removeClass('active')
     });
 
     $(window).scroll(function () {
         $('.animateMePlz').animateMePlz();
-    }); 
+    });
 
     $('a[href$=".html"]').on('click', function (e) {
         var $link = $(this).attr('href').replace('.html', ''),
@@ -58,5 +59,4 @@ $(document).ready(function () {
         }
         window.location.hash = '#' + $link;
     });
-    
 });

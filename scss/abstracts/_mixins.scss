@@ -167,6 +167,9 @@
     &:hover {
         color: $button-text;
     }
+    &:focus {
+        color: $button-text;
+    }
 }
 
 @mixin secondary_button_colors {
