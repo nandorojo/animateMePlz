@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- Oh, well hello there. My name is Fernando Rojo. If you like this project, consider buying a pair of shoes from my company at wearpatos.com -->
+
+    <meta charset="UTF-8">
+    <meta name="description" content="A simple jQuery plugin to animate HTML elements upon scrolling.">
+    <meta name="keywords" content="HTML,CSS,jQuery, animate, animate.css, animateMePlz, PATOS">
+    <meta name="author" content="Fernando">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <title>
+        animateMePlz | superpower animate.css on scroll
+    </title>
+</head>
+
+<body>
+    <header class="mainHeader">
+        <div class="logo">
+            <a href="index.html">
+                animateMePlz 🚀
+            </a>
+
+        </div>
+        <ul>
+            <li>
+                <a href="index.html">
+                Demo
+                </a>
+            </li>
+            <li>
+                <a href="customize.html">
+                Customize
+                </a>
+            </li>
+            <li>
+                <a href="use.html">
+                Install
+                </a>
+            </li>
+        </ul>
+        <div>
+            by Fernando Rojo
+        </div>
+        <div class="menuTrigger">
+            <strong>Menu</strong>
+        </div>
+    </header>
+
+    <div class="menu tablet-hidden center">
+        <div class="menuTrigger">
+            <strong>
+            Close
+            </strong>
+        </div>
+        <ul>
+            <li>
+                <a href="index.html">
+                Demo
+                </a>
+            </li>
+            <li>
+                <a href="customize.html">
+                Customize
+                </a>
+            </li>
+            <li>
+                <a href="use.html">
+                Install
+                </a>
+            </li>
+        </ul>
+        <div class="container bottom">
+            animateMePlz is a jQuery plugin by <strong><a href="https://sitebyfernando.com" target="_blank">Fernando Rojo</a></strong>.
+        </div>
+    </div>
+
+    <page id="index" class="active">
+
+        <!-- First section -->
+        <section id="first" class="big-image">
+            <div class="container animated fadeInDown">
+                <h1>
+                    animateMePlz.js
+                </h1>
+                <p>
+                    A simple, lightweight jQuery extension for scrolling animations.
+                </p>
+                <div>
+                    <a class="button" href="use.html">
+                Install
+                </a>
+                    <a class="button button-outline" href="customize.html">
+                Customize
+            </a>
+                </div>
+            </div>
+            <div class="down-arrow-container">
+                <a href="#page-content">
+                    <div class="down-arrow"></div>
+                </a>
+            </div>
+        </section>
+
+        <a name="page-content"></a>
+
+        <section class="big-image">
+            <div class="container animateMePlz bodyText">
+                <h2>
+                    Meet animateMePlz - a lightweight jQuery plugin
+                </h2>
+                <p>
+                    animateMePlz lets you animate anything on a website upon scrolling to it. It's incredibly lightweight – only 0.8 kb – while offering dozens of customizations.
+                </p>
+                <p>
+                    Copy and paste a few lines of HTML and you'll have animateMePlz installed in seconds. Thanks to Dan Eder's <a target="_blank" href="https://daneden.github.io/animate.css/">animate.css</a>, every animation is pure CSS.
+                </p>
+            </div>
+            <div class="down-arrow-container">
+                <a href="#page-content">
+                    <div class="down-arrow"></div>
+                </a>
+            </div>
+        </section>
+
+        <section id="second" class="big-image animateMePlz">
+            <h1>
+                Animate when scrolled to
+            </h1>
+        </section>
+
+        <section id="third" class="big-image animateMePlz" data-repeatplz="noRepeat">
+            <h1 class="">
+                Animate when scrolled to - but only once
+            </h1>
+        </section>
+
+        <section id="fourth" class="big-image animateMePlz" data-thresholdplz="-100">
+            <h1 class="">
+                Animate when scrolled to - delayed by 100px
+            </h1>
+        </section>
+
+        <section id="fifth" class="big-image animateMePlz" data-animationdelayplz=".5s">
+            <h1 class="">
+                Animate when scrolled to - delayed by .5 seconds
+            </h1>
+        </section>
+
+        <section id="sixth" class="big-image animateMePlz" data-animationdelayplz="1s" data-thresholdplz="100">
+            <h1 class="">
+                Animate when scrolled to - delayed by 1 second & starting 100px early
+            </h1>
+        </section>
+    </page>
+
+    <page id="customize">
+
+        <!-- First section -->
+        <section id="customize-first" class="big-image">
+            <div class="container fadeInLeft animated">
+                <h1>
+                    customize animateMePlz
+                </h1>
+                <p>
+                    Quick and easy animation customizations, tailored to your design needs.
+                </p>
+            </div>
+            <div class="down-arrow-container">
+                <a href="#page-content">
+                    <div class="down-arrow"></div>
+                </a>
+            </div>
+        </section>
+
+        <a name="page-content"></a>
+
+        <div class="customizationList">
+            <header>
+                <ul>
+                    <li>
+                        <a href="#howTo">
+                    How-to
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#defaults">
+                    Defaults
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#animationStyle">
+                    Animation Style
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#delay">
+                    Delay
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#threshold">
+                    Threshold
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#repeat">
+                    Repeat
+                    </a>
+                    </li>
+                </ul>
+            </header>
+
+            <a class="anchor" name="howTo"></a>
+            <section>
+                <div class="container">
+                    <h2>
+                        How to customize animateMePlz
+                    </h2>
+                    <p>
+                        <strong>This section is for beginners. Scroll down to defaults if you're familiar with jQuery.</strong>
+                    </p>
+                    <p>
+                        <i>
+                    <strong>Note:</strong> This probably goes without say, but before trying to do any customizations, make sure you've already <a href="use.html">installed</a> animateMePlz on your website.
+                    </i>
+                    </p>
+                    <p>
+                        The current version of animateMePlz has the following customizations available: animationStyle, animationDelay, repeat, and threshold.
+                    </p>
+                    <p>
+                        There are two ways to customize animateMePlz options. The first way is to edit the plugin parameters. The second way is to insert an inline customization on an HTML element. I generally recommend the first way, but will show how both are done below.
+                    </p>
+                    <h3>
+                        Method #1: edit animateMePlz with plugin parameters
+                    </h3>
+                    <p>
+                        This is the quickest and most scalable way to customize your plugin. The first thing you have to do is locate the initation script. We inserted it into our HTML in step #2 on the <a href="use.html">install</a> page. It looks like this.
+                    </p>
+                    <pre class="language-html">
+<code>&lt;script&gt;
+    $(document).ready(function(){
+        $(window).scroll(function() {
+            $('.animateMePlz').animateMePlz();
+        });
+    }) 
+&lt;/script&gt;</code>
+                </pre>
+
+                    <p>
+                        We're going to be editing parameters inside of <code class="language-javascript">$('.animateMePlz').animateMePlz()</code>. First add the <code class="language-javascript">{}</code> squiggles inside the parentheses. Then add the parameter change.
+                    </p>
+
+                    <p>
+                        <strong>Example #1:</strong> say you want to edit the animationStyle for every element that has the '.animateMePlz' class. You want that animationStyle to be 'bounceIn', as found on Dan Eden's
+                        <a href="https://daneden.github.io/animate.css/" target="_blank">website</a>.
+                    </p>
+
+                    <pre class="language-javascript">
+<code>$('.animateMePlz').animateMePlz({
+    animationStyle: 'bounceIn'
+});</code></pre>
+
+                    <p>
+                        <strong>Example #2:</strong> What if, in addition to the new animationStyle, we want to change the threshold?
+                    </p>
+
+                    <p> We know that the threshold is an integer value, rather than a string, so it doesn't go in quotes. Don't forget to put a comma after every attribute except the last one.
+                    </p>
+
+                    <pre class="language-javascript">
+<code>$('.animateMePlz').animateMePlz({
+    animationStyle: 'bounceIn', // Don't forget to check your commas & quotes
+    threshold: 30
+});</code>
+                </pre>
+                    <h3>
+                        Method #2: edit animateMePlz with inline HTML attributes
+                    </h3>
+                    <p>
+                        You can achieve the same from example #2 by using inline attributes in your HTML. You would have to do this on every element if you choose this method.
+                    </p>
+                    <pre class="language-html"><code>&lt;div data-animationStylePlz="bounceIn" 
+     data-thresholdplz="20"&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </section>
+
+            <a class="anchor" name="defaults"></a>
+            <section>
+                <div class="container">
+                    <h2>
+                        Defaults
+                    </h2>
+                    <p>
+                        The code block below shows the default settings specified for the animateMePlz.js plugin. You don't have to change any of the options, but if you want to, this gives you reference on what they are by default.
+                    </p>
+                    <pre class="language-javascript">
+<code>  
+$('.animateMePlz').animateMePlz({
+    threshold: 20,            // integers don't have quotes
+    animationStyle: 'fadeIn', // strings do
+    repeat: 'repeat',
+    animationDelay: '.25s'    // be careful with your commas
+});
+</code></pre>
+                </div>
+            </section>
+
+            <a class="anchor" name="animationStyle"></a>
+            <section>
+                <div class="container">
+                    <h2>
+                        animationStyle
+                    </h2>
+                    <p>
+                        <strong>Format: case-sensitive string</strong>
+                    </p>
+                    <p>
+                        There is an exhaustive list of animation styles available on Dan Eden's <a target="_blank" href="https://daneden.github.io/animate.css/">animate.css</a> website.
+                    </p>
+                    <p>
+                        The default animationStyle is <strong>'fadeIn'</strong>. You can easily change it to any style that's on Dan's website.
+                    </p>
+                    <h3>
+                        Change in plugin
+                    </h3>
+                    <pre class="language-javascript"><code>$('.animateMePlz').animateMePlz({
+    animationStyle: 'bounceIn'
+});
+</code></pre>
+                    <h3>
+                        Change in inline HTML element
+                    </h3>
+                    <pre class="language-html">
+<code>  &lt;div data-animationStylePlz="bounceIn"&gt;&lt;/div&gt;</code></pre>
+                </div>
+            </section>
+
+            <a class="anchor" name="delay"></a>
+            <section>
+                <div class="container">
+                    <h2>
+                        animationDelay
+                    </h2>
+                    <p>
+                        <strong>format: string, ending with the letter s to denote seconds</strong>
+                    </p>
+                    <p>
+                        The default animationDelay is <strong>'.25s'</strong>. This is the equivalent of animation-delay in CSS, so you can apply it either way. If you customize through the plugin, it still has the browser prefixes.
+                    </p>
+                    <p>
+                        The animationDelay can be combined with the threshold pretty well. I like to have a bit of a positive threshold - which causes the delay to start a certain number of pixels early. Then, if you add an animationDelay, it comes in smoothly.
+                    </p>
+                    <h3>
+                        Change in plugin
+                    </h3>
+                    <pre class="language-javascript"><code>$('.animateMePlz').animateMePlz({
+    animationDelay: '.5s'
+});
+</code></pre>
+                    <h3>
+                        Change in inline HTML element
+                    </h3>
+                    <pre class="language-html">
+<code>  &lt;div data-animationDelayPlz=".5s"&gt;&lt;/div&gt;</code></pre>
+                </div>
+            </section>
+
+            <a class="anchor" name="threshold"></a>
+            <section>
+                <div class="container">
+                    <h2>
+                        threshold
+                    </h2>
+                    <p>
+                        <strong>format: integer, denoting pixels</strong>
+                    </p>
+                    <p>
+                        The default threshold is <strong>20</strong>. The number stands for pixels, but do not add 'px'.
+                    </p>
+                    <p>
+                        The threshold represents the number of pixels that precede the element you want to animate.
+                    </p>
+                    <p>
+                        For instance, if the threshold is 50, the animation will start 50px before the viewport (user's screen) has reached the <code class="language-javascript">'.animateMePlz'</code> element.
+                    </p>
+                    <h3>
+                        Change in plugin
+                    </h3>
+                    <pre class="language-javascript"><code>$('.animateMePlz').animateMePlz({
+    threshold: 50
+});
+</code></pre>
+                    <h3>
+                        Change in inline HTML element
+                    </h3>
+                    <pre class="language-html">
+<code>  &lt;div data-thresholdPlz="50"&gt;&lt;/div&gt;</code></pre>
+                </div>
+            </section>
+
+            <a class="anchor" name="repeat"></a>
+            <section>
+                <div class="container">
+                    <h2>
+                        repeat
+                    </h2>
+                    <p>
+                        <strong>format: string, two options, case-sensitive</strong>
+                    </p>
+                    <p>
+                        repeat defines whether or not the element animates every time someone scrolls to it, or only the first time.
+                    </p>
+                    <p>
+                        The two options are <strong>'repeat'</strong> and <strong>'noRepeat'</strong>. The default is set to 'repeat'.
+                    </p>
+                    <h3>
+                        Change in plugin
+                    </h3>
+                    <pre class="language-javascript"><code>$('.animateMePlz').animateMePlz({
+    repeat: 'noRepeat'
+});
+</code></pre>
+                    <h3>
+                        Change in inline HTML element
+                    </h3>
+                    <pre class="language-html">
+<code>  &lt;div data-repeatPlz="noRepeat"&gt;&lt;/div&gt;</code></pre>
+                </div>
+            </section>
+        </div>
+
+    </page>
+
+    <page id="use">
+
+
+        <!-- First section -->
+        <section id="use-first" class="big-image">
+            <div class="container fadeInUp animated">
+                <h1>
+                    install animateMePlz
+                </h1>
+                <p>
+                    Get animateMePlz up and running in under a minute. Hardly any javascript, jQuery or CSS knowledge necessary.
+                </p>
+                <div>
+                    <a class="button">
+                Download
+                </a>
+                </div>
+            </div>
+            <div class="down-arrow-container">
+                <a href="#page-content">
+                    <div class="down-arrow"></div>
+                </a>
+            </div>
+        </section>
+
+        <a name="page-content"></a>
+
+        <div class="content">
+            <!-- Code blocks -->
+            <section class="code-block">
+                <div class="container">
+                    <h2>
+                        1. Insert jQuery & animateMePlz.js
+                    </h2>
+                    <p>
+                        Once you have downloaded <a>the necessary files</a>, place the animateMePlz.js file right above the closing <code class="language-html">&lt;/body&gt;</code> tag of your HTML file. It should go below jQuery.
+                    </p>
+                    <pre class="language-html">
+<code class="language-html">
+&lt;body&gt;
+     ...
+     &lt;!-- insert jQuery (you can also download the file and insert it) --&gt;
+     &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+     &lt;!-- insert animateMePlz.js into your html --&gt;
+     &lt;script src="path/to/animateMePlz.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code> 
+</pre>
+                    <p>
+                        <strong>Note:</strong> If you don't know what the path/to/ is supposed to be before the animate.js file, simply drag the file into the same folder as your index.html file and leave path/to/ empty.
+                    </p>
+                </div>
+            </section>
+            <section class="code-block">
+                <div class="container">
+                    <h2>
+                        2. Initiate animateMePlz
+                    </h2>
+                    <p>
+                        Add a script tag below the first two from step #1 that initiates your function.
+                        <pre class="language-html">
+<code class="language-html">
+&lt;body&gt;
+    ...
+    &lt;!-- insert jQuery (you can also download the file and insert it) --&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;!-- insert animateMePlz.js into your html --&gt;
+    &lt;script src="path/to/animateMePlz.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;!-- initiate function on scroll --&gt;
+    &lt;script&gt;
+        $(document).ready(function(){
+            $(window).scroll(function() {
+                $('.animateMePlz').animateMePlz();
+            });
+        }) 
+    &lt;/script&gt;
+&lt;/body&gt;
+</code> 
+</pre>
+                        <p>
+                            Any HTML elements with that class (<code class="language-html">&lt;div class="animateMePlz"&gt;&lt;/div&gt;</code>) will be animated upon scroll.
+                        </p>
+                        <p>
+                            <strong>Note: </strong>I would recommend having a unique class name, as used above, for all elements you want animated. Using a class you already frequently have in your HTML – such as <code class="language-javascript">$('.container').animateMePlz()</code> – will likely be tougher to manage at scale. If this note was confusing to you, just ignore it and do exactly as shown above.
+                        </p>
+                </div>
+            </section>
+            <section class="code-block">
+                <div class="container">
+                    <h2>
+                        3. Insert animate.css
+                    </h2>
+                    <p>
+                        You can insert animate.css via CDN by copying what I entered below. Make sure this is in the <code class="language-html">&lt;head&gt;</code> of your document. You can also <a href="https://daneden.github.io/animate.css/" target="_blank">download the file</a> from Dan Eder's website.
+                    </p>
+                    <pre class="language-html">
+<code class="language-html">
+&lt;head&gt;
+    ...
+    &lt;!-- animate.css --&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"&gt;
+&lt;/head&gt;
+</code> 
+</pre>
+                </div>
+            </section>
+            <section class="code-block">
+                <div class="container">
+                    <h2>
+                        4. Apply to elements
+                    </h2>
+                    <p>
+                        Add the class <code class="language-javascript">'animateMePlz'</code> to any element you want to animate.
+                    </p>
+                    <pre class="language-html">
+<code class="language-html">
+&lt;body&gt;
+    ...
+    &lt;div class="animateMePlz"&gt;
+        Fade this div in!
+    &lt;/div&gt;
+&lt;/body&gt;
+</code> 
+</pre>
+                    <p>
+                        The default animation is <strong>fadeIn</strong>. If you would like to choose a different animation, after installing the plugin, check out the available <a href="customize.html">customizations</a>.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+    </page>
+
+    <!-- TypeKit -->
+    <script>
+        (function(d) {
+            var config = {
+                    kitId: 'nas7eea',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function() {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function() {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <!-- style code blocks -->
+    <script src="js/prism.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- animateMePlz plugin -->
+    <script src="js/animateMePlz.jQuery.min.js" type="text/javascript"></script>
+    <!-- Custom javascript -->
+    <script src="js/javascript.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                $('.animateMePlz').animateMePlz()
+            });
+        });
+    </script>
+</body>
+
+</html>
