@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     function headerScroller() {
         $scrolled = $(window).scrollTop();
-        if ($scrolled > $meter - 100) {
+        if ($scrolled > $meter - 200) {
             $header.addClass('active');
         } else {
             $header.removeClass('active');
