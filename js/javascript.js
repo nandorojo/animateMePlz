@@ -14,19 +14,23 @@ $(document).ready(function () {
             $header.removeClass('active');
         }
     };
-    
-    function mobileHeader(){
+
+    function mobileHeader() {
         $mobileHeader.toggleClass('active');
         $body.toggleClass('overflowHidden');
     };
-    
+
     headerScroller(); // initiate proper header colors based on scroll position
 
     $(window).scroll(function () { // change proper header colors based on scroll position
         headerScroller();
     });
-    
-    $mobileHeaderTrigger.on('click', function(){ // show / hide mobile menu
+
+    $mobileHeaderTrigger.on('click', function () { // show / hide mobile menu
         mobileHeader()
-    })
+    });
+    
+    $(window).scroll(function () {
+        $('.animateMePlz').animateMePlz();
+    });
 });
