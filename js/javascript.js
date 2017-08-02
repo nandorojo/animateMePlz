@@ -26,7 +26,7 @@ $(document).ready(function () {
             $newPage = $("#" + splitHash);
         if ($newPage.length != 0) {
             $('page').removeClass('active');
-            $newPage.addClass('active')
+            $newPage.addClass('active');
         }
     };
 
@@ -39,10 +39,14 @@ $(document).ready(function () {
     $mobileHeaderTrigger.on('click', function () { // show / hide mobile menu
         mobileHeader()
     });
+    
+    $mobileHeader.find('a').on('click', function(){
+        $mobileHeader.removeClass('active')
+    });
 
     $(window).scroll(function () {
         $('.animateMePlz').animateMePlz();
-    });
+    }); 
 
     $('a[href$=".html"]').on('click', function (e) {
         var $link = $(this).attr('href').replace('.html', ''),
@@ -53,5 +57,6 @@ $(document).ready(function () {
             $newPage.addClass('active');
         }
         window.location.hash = '#' + $link;
-    })
+    });
+    
 });
