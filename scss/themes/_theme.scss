@@ -1,0 +1,55 @@
+/* Themes -> Theme partial */
+
+// General Styles
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.content {
+    max-width: 700px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.big-image {
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include display-flex;
+    @include flex-center-vertical;
+    text-align: center;
+    @include justify-content(center);
+    position: relative;
+    height: 100vh;
+    color: $background-color;
+    * {
+        z-index: 1;
+    }
+}
+.bodyText {
+	color: $body-color;
+    max-width: 600px;
+    margin: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include full-width-height;
+    background: black;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,87 @@
+/* Layout -> Header Styles */
+
+header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    @include display-flex;
+    @include justify-content(space-between);
+    color: $header-color;
+    transition: all .25s ease;
+    &>* {
+        display: none;
+    }
+    .logo,
+    .menuTrigger {
+        display: block;
+    }
+    &.active {
+        background: $background-color;
+        box-shadow: 0px -2px 19px 0px gray;
+        color: $body-color;
+        .logo {
+            color: $secondary-color;
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            display: inline-block;
+            margin: 0 20px;
+            a,
+            a:hover {
+                font: inherit;
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+    @include mq($from: tablet) {
+        &>* {
+            display: block;
+        }
+        .menuTrigger {
+            display: none;
+        }
+    }
+}
+
+.customizationList {
+    header {
+        position: sticky;
+        top: 66px;
+        background: $primary-color;
+        padding: 0;
+        text-align: center;
+        font-size: medium;
+        letter-spacing: .03em;
+        font-weight: bold;
+        text-transform: uppercase;
+        ul {
+            width: 100%;
+            @include mq($from: tablet) {
+                @include display-flex;
+                li {
+                    flex: 1;
+                    margin: 0;
+                    cursor: pointer;
+                    a {
+                        padding: 20px;
+                        display: block;
+                        &:hover {
+                            transform: translateY(0);
+                        }
+                    }
+                    &:hover {
+                        background: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+}

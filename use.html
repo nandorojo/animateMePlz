@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <title>
+        animateMePlz | animate.css on scroll
+    </title>
+</head>
+
+<body>
+
+    <header class="mainHeader">
+        <div class="logo">
+            <a href="index.html">
+                animateMePlz 🚀
+            </a>
+
+        </div>
+        <ul>
+            <li>
+                <a href="index.html">
+                Demo
+                </a>
+            </li>
+            <li>
+                <a href="customize.html">
+                Customize
+                </a>
+            </li>
+            <li>
+                <a href="use.html">
+                Install
+                </a>
+            </li>
+        </ul>
+        <div>
+            by Fernando Rojo
+        </div>
+        <div class="menuTrigger">
+            <strong>Menu</strong>
+        </div>
+    </header>
+
+    <div class="menu tablet-hidden center">
+        <div class="menuTrigger">
+            <strong>
+            Close
+            </strong>
+        </div>
+        <ul>
+            <li>
+                <a href="index.html">
+                Demo
+                </a>
+            </li>
+            <li>
+                <a href="customize.html">
+                Customize
+                </a>
+            </li>
+            <li>
+                <a href="use.html">
+                Install
+                </a>
+            </li>
+        </ul>
+        <div class="container bottom">
+            animateMePlz is a jQuery plugin by <strong><a href="https://sitebyfernando.com" target="_blank">Fernando Rojo</a></strong>.
+        </div>
+    </div>
+    <!-- First section -->
+    <section id="use-first" class="big-image">
+        <div class="container fadeInUp animated">
+            <h1>
+                install animateMePlz
+            </h1>
+            <p>
+                Get animateMePlz up and running in under a minute. Hardly any javascript, jQuery or CSS knowledge necessary.
+            </p>
+            <div>
+                <a class="button">
+                Download
+                </a>
+            </div>
+        </div>
+        <div class="down-arrow-container">
+            <a href="#page-content">
+                <div class="down-arrow"></div>
+            </a>
+        </div>
+    </section>
+    
+    <a name="page-content"></a>
+    
+    <div class="content">
+        <!-- Code blocks -->
+        <section class="code-block">
+            <div class="container">
+                <h2>
+                    1. Insert jQuery & animateMePlz.js
+                </h2>
+                <p>
+                    Once you have downloaded <a>the necessary files</a>, place the animateMePlz.js file right above the closing <code class="language-html">&lt;/body&gt;</code> tag of your HTML file. It should go below jQuery.
+                </p>
+                <pre class="language-html">
+<code class="language-html">
+&lt;body&gt;
+     ...
+     &lt;!-- insert jQuery (you can also download the file and insert it) --&gt;
+     &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+     &lt;!-- insert animateMePlz.js into your html --&gt;
+     &lt;script src="path/to/animateMePlz.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code> 
+</pre>
+                <p>
+                    <strong>Note:</strong> If you don't know what the path/to/ is supposed to be before the animate.js file, simply drag the file into the same folder as your index.html file and leave path/to/ empty.
+                </p>
+            </div>
+        </section>
+        <section class="code-block">
+            <div class="container">
+                <h2>
+                    2. Initiate animateMePlz
+                </h2>
+                <p>
+                    Add a script tag below the first two from step #1 that initiates your function.
+                    <pre class="language-html">
+<code class="language-html">
+&lt;body&gt;
+    ...
+    &lt;!-- insert jQuery (you can also download the file and insert it) --&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;!-- insert animateMePlz.js into your html --&gt;
+    &lt;script src="path/to/animateMePlz.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;!-- initiate function on scroll --&gt;
+    &lt;script&gt;
+        $(document).ready(function(){
+            $(window).scroll(function() {
+                $('.animateMePlz').animateMePlz();
+            });
+        }) 
+    &lt;/script&gt;
+&lt;/body&gt;
+</code> 
+</pre>
+                    <p>
+                        Any HTML elements with that class (<code class="language-html">&lt;div class="animateMePlz"&gt;&lt;/div&gt;</code>) will be animated upon scroll.
+                    </p>
+                    <p>
+                        <strong>Note: </strong>I would recommend having a unique class name, as used above, for all elements you want animated. Using a class you already frequently have in your HTML – such as <code class="language-javascript">$('.container').animateMePlz()</code> – will likely be tougher to manage at scale. If this note was confusing to you, just ignore it and do exactly as shown above.
+                    </p>
+            </div>
+        </section>
+        <section class="code-block">
+            <div class="container">
+                <h2>
+                    3. Insert animate.css
+                </h2>
+                <p>
+                    You can insert animate.css via CDN by copying what I entered below. Make sure this is in the <code class="language-html">&lt;head&gt;</code> of your document. You can also <a href="https://daneden.github.io/animate.css/" target="_blank">download the file</a> from Dan Eder's website.
+                </p>
+                <pre class="language-html">
+<code class="language-html">
+&lt;head&gt;
+    ...
+    &lt;!-- animate.css --&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"&gt;
+&lt;/head&gt;
+</code> 
+</pre>
+            </div>
+        </section>
+        <section class="code-block">
+            <div class="container">
+                <h2>
+                    4. Apply to elements
+                </h2>
+                <p>
+                    Add the class <code class="language-javascript">'animateMePlz'</code> to any element you want to animate.
+                </p>
+                <pre class="language-html">
+<code class="language-html">
+&lt;body&gt;
+    ...
+    &lt;div class="animateMePlz"&gt;
+        Fade this div in!
+    &lt;/div&gt;
+&lt;/body&gt;
+</code> 
+</pre>
+                <p>
+                    The default animation is <strong>fadeIn</strong>. If you would like to choose a different animation, after installing the plugin, check out the available <a href="customize.html">customizations</a>.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- animateMePlz plugin -->
+    <script src="js/animateMePlz.jQuery.min.js" type="text/javascript"></script>
+    <!-- Custom javascript -->
+    <script src="js/javascript.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                $('.animated').animateMePlz();
+            });
+        });
+
+    </script>
+    <!-- TypeKit -->
+    <script>
+        (function(d) {
+            var config = {
+                    kitId: 'nas7eea',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function() {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function() {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+
+    </script>
+    <!-- style code blocks -->
+    <script src="js/prism.js"></script>
+
+</body>
+
+</html>

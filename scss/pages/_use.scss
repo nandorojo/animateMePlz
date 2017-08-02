@@ -1,0 +1,14 @@
+/* Pages -> Press Styles */
+
+#use-first {
+    background: #ff2d00;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(90deg, #ff2d00, #ffa34f);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, #ff2d00, #ffa34f);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, #ff2d00, #ffa34f);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(90deg, #ff2d00, #ffa34f);
+    /* Standard syntax */
+}

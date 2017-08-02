@@ -1,0 +1,19 @@
+/* Abstracts -> variables partial */
+$primary-color: #00beff;
+$secondary-color: #ec2a80;
+$background-color: white;
+$body-color: #32325D;
+
+$button-background: $primary-color;
+$button-text: $background-color;
+
+$selection-background: $secondary-color;
+$selection-text: $background-color;
+
+$header-background-one: $secondary-color;
+$header-background-two: $primary-color;
+$header-color: $background-color;
+
+$button-border-radius: 3px;
+
+$padding: 20px;

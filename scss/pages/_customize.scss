@@ -1,0 +1,39 @@
+/* Pages -> Work Styles */
+
+#customize-first {
+    background: #22d2ee;
+    /* For browsers that do not support gradients */
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: -webkit-gradient(linear, left top, right top, from(#22d2ee), to(#9400d3));
+    background: linear-gradient(90deg, #22d2ee, #9400d3);
+    /* Standard syntax */
+}
+
+.customizationList {
+    section {
+        padding-bottom: 50px;
+        border-bottom: 1px solid lightgrey;
+    }
+    &>*:not(header) {
+        max-width: 700px;
+        margin: auto;
+    }
+    padding-bottom: 50px;
+    h2 {
+        position: -webkit-sticky;
+        position: sticky;
+        color: $primary-color;
+        top: 66px;
+        background: $background-color;
+        @include mq($from: tablet) {
+            top: 127px;
+        }
+    }
+    a.anchor {
+        cursor: default;
+        display: block;
+        transform: translateY(-150px);
+    }
+}

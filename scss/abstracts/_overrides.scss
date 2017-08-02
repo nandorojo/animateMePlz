@@ -1,0 +1,13 @@
+.tablet-hidden {
+    @include mq($from: tablet) {
+        display: none;
+    }
+}
+
+.overflowHidden {
+    overflow: hidden;
+}
+
+.center {
+	text-align: center;
+}
