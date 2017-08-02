@@ -4,10 +4,10 @@
 
         // Default options
         var settings = $.extend({
-            threshold: 20,
+            threshold: 50,
             animationStyle: 'fadeIn',
             repeat: 'repeat',
-            animationDelay: '.25s'
+            animationDelay: '.45s'
         }, options);
 
         var $windowHeight = $(window).height(),

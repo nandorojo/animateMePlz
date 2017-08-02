@@ -20,23 +20,11 @@ $(document).ready(function () {
         $body.toggleClass('overflowHidden');
     };
 
-    function samePageLink(event) {
-        var $this = $(this),
-            $link = $this.attr('href').replace('.html', ''),
-            $newPage = $('#' + $link);
-        event.preventDefault();
-        if ($newPage.length == 0) {
-            $('page').removeClass('active');
-            $newPage.addClass('active')
-        }
-        window.location.hash = '#' + $link;
-    };
-
     if (window.location.hash) {
         var hash = window.location.hash.substring(1), //Puts hash in variable, and removes the # character
-            splitHash = hash.replace('#', '').replace('.html',''),
+            splitHash = hash.replace('#', ''),
             $newPage = $("#" + splitHash);
-        if ($newPage.length == 0) {
+        if ($newPage.length != 0) {
             $('page').removeClass('active');
             $newPage.addClass('active')
         }
@@ -56,7 +44,14 @@ $(document).ready(function () {
         $('.animateMePlz').animateMePlz();
     });
 
-    $('a[href$=.html]').on('click', function (event) {
-        samePageLink(event);
+    $('a[href$=".html"]').on('click', function (e) {
+        var $link = $(this).attr('href').replace('.html', ''),
+            $newPage = $('#' + $link);
+        if ($newPage.length != 0) {
+            e.preventDefault();
+            $('page').removeClass('active');
+            $newPage.addClass('active');
+        }
+        window.location.hash = '#' + $link;
     })
 });
