@@ -19,11 +19,8 @@ $(document).ready(function () {
     function mobileHeader() {
         $body.toggleClass('menuOpen');
         $header.toggleClass('hideUp');
-        $('page.active .pageOverlay').toggleClass('active');
         $body.toggleClass('overflowHidden');
-        if (!$body.hasClass('menuOpen')) {
-            window.scrollTo(0,0);
-        }
+        window.scrollTo(0, 0);
     };
 
     if (window.location.hash) {
@@ -48,20 +45,27 @@ $(document).ready(function () {
         }
         window.location.hash = '#' + $link;
     });
-    
+
     $(window).scroll(function () { // change proper header colors based on scroll position
         headerScroller();
     });
 
     $mobileHeaderTrigger.on('click', function () { // show / hide mobile menu
-        mobileHeader()
+        mobileHeader();
     });
 
     $(window).scroll(function () { // initiate plugin
         $('.animateMePlz').animateMePlz();
     });
 
+
+    $('.pageOverlay').on('click', function () {
+        if ($(this).parent().hasClass('active')) {
+            mobileHeader();
+        }
+    });
+
     $mobileHeader.find('a').on('click', function () {
-        mobileHeader()
+        mobileHeader();
     });
 });

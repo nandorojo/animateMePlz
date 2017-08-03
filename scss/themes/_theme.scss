@@ -29,15 +29,6 @@ page {
     }
     .pageOverlay {
         display: none;
-        &.active {
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            @include full-width-height;
-            cursor: pointer;
-            z-index: 5;
-        }
     }
 }
 
@@ -52,6 +43,7 @@ page {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    position: relative;
     @include display-flex;
     @include flex-center-vertical;
     text-align: center;
@@ -68,16 +60,6 @@ page {
     color: $body-color;
     max-width: 600px;
     margin: auto;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    @include full-width-height;
-    background: black;
-    opacity: 0.5;
-    z-index: 0;
 }
 
 ul {

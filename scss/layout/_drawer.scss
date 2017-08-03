@@ -46,6 +46,15 @@
             -webkit-box-shadow: 4px 0px 60px rgba(50, 50, 93, 0.62);
             box-shadow: 4px 0px 60px rgba(50, 50, 93, 0.62);
             position: relative;
+            .pageOverlay {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                @include full-width-height;
+                cursor: pointer;
+                z-index: 3;
+            }
         }
         .menu {
             -webkit-transform: translateX(0);
