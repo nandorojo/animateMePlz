@@ -20,7 +20,10 @@ $(document).ready(function () {
         $body.toggleClass('menuOpen');
         $header.toggleClass('hideUp');
         $('page.active .pageOverlay').toggleClass('active');
-        $body.toggleClass('overflowHidden')
+        $body.toggleClass('overflowHidden');
+        if (!$body.hasClass('menuOpen')) {
+            window.scrollTo(0,0);
+        }
     };
 
     if (window.location.hash) {
