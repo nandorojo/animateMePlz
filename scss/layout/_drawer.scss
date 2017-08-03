@@ -9,19 +9,24 @@
     width: 280px;
     height: 100%;
     padding: $padding;
+    padding-left: $padding*2;
+    -webkit-transition: all .5s ease .1s;
     transition: all .5s ease .1s;
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
     color: $body-color;
     @include display-flex;
     @include justify-content(space-between);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     .menuTrigger {
         text-align: right;
     }
     ul {
         width: 100%;
-        font-size: 2.2em;
+        font-size: 2em;
         font-weight: bold;
     }
 }
@@ -34,14 +39,18 @@
     @include mq($until: tablet) {
         page.active {
             overflow: hidden;
+            -webkit-transform: scale(0.6) translateX(-280px);
             transform: scale(0.6) translateX(-280px);
+            -webkit-transition-delay: 0s;
             transition-delay: 0s;
+            -webkit-box-shadow: 4px 0px 60px rgba(50, 50, 93, 0.62);
             box-shadow: 4px 0px 60px rgba(50, 50, 93, 0.62);
             position: relative;
         }
         .menu {
             -webkit-transform: translateX(0);
             transform: translateX(0);
+            -webkit-transition-delay: .5s;
             transition-delay: .5s;
         }
     }

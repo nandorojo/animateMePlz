@@ -2,6 +2,7 @@
 
 // General Styles
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     max-width: 100%;
 }
@@ -15,10 +16,14 @@ page {
     &.active {
         display: block;
         @include mq($until: tablet) {
+            -webkit-transform: scale(1) translateX(0);
             transform: scale(1) translateX(0);
+            -webkit-transform-origin: 30% 50%;
             transform-origin: 30% 50%;
+            -webkit-transition-delay: .5s;
             transition-delay: .5s;
             height: 100vh;
+            -webkit-transition: all .5s ease .25s;
             transition: all .5s ease .25s;
         }
     }
