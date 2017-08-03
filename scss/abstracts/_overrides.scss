@@ -11,3 +11,8 @@
 .center {
 	text-align: center;
 }
+
+.hideUp {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%)
+}

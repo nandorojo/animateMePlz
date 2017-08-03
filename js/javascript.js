@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
     var $header = $('.mainHeader'),
         $headerHeight = $header.height(),
         $meter = $('section').first().height(),
@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     function headerScroller() {
         $scrolled = $(window).scrollTop();
-        if ($scrolled > $meter - 200) {
+        if ($scrolled > 100) {
             $header.addClass('active');
         } else {
             $header.removeClass('active');
@@ -17,8 +17,9 @@ $(document).ready(function () {
     };
 
     function mobileHeader() {
-        $mobileHeader.toggleClass('active');
-   //     $body.toggleClass('overflowHidden'); TODO i don't like how this makes the scroll bar change so fuck it for now 
+        $body.toggleClass('menuOpen');
+        $header.toggleClass('hideUp');
+        $('page.active .pageOverlay').toggleClass('active');
     };
 
     if (window.location.hash) {
@@ -33,6 +34,17 @@ $(document).ready(function () {
 
     headerScroller(); // initiate proper header colors based on scroll position
 
+    $('a[href$=".html"]').on('click', function (e) {
+        var $link = $(this).attr('href').replace('.html', ''),
+            $newPage = $('#' + $link);
+        if ($newPage.length != 0 && $(this).attr('target') != '_blank') {
+            e.preventDefault();
+            $('page').removeClass('active');
+            $newPage.addClass('active');
+        }
+        window.location.hash = '#' + $link;
+    });
+    
     $(window).scroll(function () { // change proper header colors based on scroll position
         headerScroller();
     });
@@ -41,22 +53,11 @@ $(document).ready(function () {
         mobileHeader()
     });
 
-    $mobileHeader.find('a').on('click', function () {
-        $mobileHeader.removeClass('active')
-    });
-
-    $(window).scroll(function () {
+    $(window).scroll(function () { // initiate plugin
         $('.animateMePlz').animateMePlz();
     });
 
-    $('a[href$=".html"]').on('click', function (e) {
-        var $link = $(this).attr('href').replace('.html', ''),
-            $newPage = $('#' + $link);
-        if ($newPage.length != 0) {
-            e.preventDefault();
-            $('page').removeClass('active');
-            $newPage.addClass('active');
-        }
-        window.location.hash = '#' + $link;
+    $mobileHeader.find('a').on('click', function () {
+        mobileHeader()
     });
 });

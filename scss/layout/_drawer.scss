@@ -1,48 +1,48 @@
 /* Layout -> Drawer Styles */
 
 .menu {
-    background: #ffffff;
-    /* For browsers that do not support gradients */
-    /* For Safari 5.1 to 6.0 */
-    /* For Opera 11.1 to 12.0 */
-    /* For Firefox 3.6 to 15 */
-    background: -webkit-gradient(linear, left top, left bottom, from(#00BCD4), to(#41b87a));
-    background: linear-gradient(180deg, #00BCD4, #41b87a);
+    background: $background-color;
     /* Standard syntax */
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 280px;
     height: 100%;
-    z-index: 3;
-    transition: all .5s ease .1s;   
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-    color: $background-color;
-    &.active {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
+    padding: $padding;
+    transition: all .5s ease .1s;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    color: $body-color;
+    @include display-flex;
+    @include justify-content(space-between);
+    flex-direction: column;
     .menuTrigger {
-        position: absolute;
-        top: 20px;
-        right: 20px;
+        text-align: right;
     }
     ul {
         width: 100%;
-        text-align: center;
-        padding-top: 100px;
         font-size: 2.2em;
-        line-height: 2em;
         font-weight: bold;
-    }
-    .bottom {
-        position: absolute;
-        bottom: 20px;
-        left: 0;
     }
 }
 
 .menuTrigger {
     cursor: pointer;
+}
+
+.menuOpen {
+    @include mq($until: tablet) {
+        page.active {
+            overflow: hidden;
+            transform: scale(0.6) translateX(-280px);
+            transition-delay: 0s;
+            box-shadow: 4px 0px 60px rgba(50, 50, 93, 0.62);
+            position: relative;
+        }
+        .menu {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            transition-delay: .5s;
+        }
+    }
 }

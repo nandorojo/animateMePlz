@@ -14,6 +14,25 @@ page {
     display: none;
     &.active {
         display: block;
+        @include mq($until: tablet) {
+            transform: scale(1) translateX(0);
+            transform-origin: 30% 50%;
+            transition-delay: .5s;
+            height: 100vh;
+            transition: all .5s ease .25s;
+        }
+    }
+    .pageOverlay {
+        display: none;
+        &.active {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            @include full-width-height;
+            cursor: pointer;
+            z-index: 5;
+        }
     }
 }
 
@@ -32,15 +51,11 @@ page {
     @include flex-center-vertical;
     text-align: center;
     @include justify-content(center);
-    position: relative;
     color: $background-color;
     padding: 150px 0;
     @include mq($from: tablet) {
         height: 100vh;
         padding: 0;
-    }
-    * {
-        z-index: 1;
     }
 }
 
