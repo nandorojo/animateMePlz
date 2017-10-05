@@ -1,1 +1,35 @@
 /* Layout -> Navigation Styles */
+
+page {
+    &.beingMoved {
+        display: block;
+        height: 100vh;
+        overflow: hidden;
+        box-shadow: 1px 1px 60px rgba(50, 50, 93, 0.62);
+        transition: transform .5s ease;
+        will-change: transform;
+        position: absolute;
+    }
+    &.hideFirst {
+        -webkit-transform: scale(0.7) translateX(10%);
+        transform: scale(0.7) translateX(10%);
+        z-index: 0;
+    }
+    &.hideSecond {
+        -webkit-transform: scale(0.7) translateX(120%);
+        transform: scale(0.7) translateX(120%);
+    }
+    &.showFirst {
+        -webkit-transform: scale(0.7) translateX(-100%);
+        transform: scale(0.7) translateX(-100%);
+    }
+    &.showSecond {
+        -webkit-transform: scale(0.7) translateX(0%);
+        transform: scale(0.7) translateX(0%);
+    }
+    &.showFinal {
+        -webkit-transform: scale(1) translateX(0%);
+        transform: scale(1) translateX(0%);
+        position: static;
+    }
+}
